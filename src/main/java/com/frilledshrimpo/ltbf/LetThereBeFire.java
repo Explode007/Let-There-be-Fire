@@ -23,7 +23,7 @@ import org.slf4j.Logger;
 @Mod(LetThereBeFire.MODID)
 public class LetThereBeFire {
 
-    public static final String MODID = "let_there_be_fire";
+    public static final String MODID = "lettherebefire";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
@@ -35,8 +35,8 @@ public class LetThereBeFire {
 
         modEventBus.addListener(this::commonSetup);
 
-        CREATIVE_MODE_TABS.register(modEventBus);
         MinecraftForge.EVENT_BUS.register(this);
+        CREATIVE_MODE_TABS.register(modEventBus);
 
 
         modEventBus.addListener(this::addCreative);
@@ -44,24 +44,19 @@ public class LetThereBeFire {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
-        LOGGER.info("ESTO ES LTBF");
 
     }
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-//        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-//            event.accept();
+
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        // Do something when the server starts
-        LOGGER.info("HELLO from server starting");
+
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
 
