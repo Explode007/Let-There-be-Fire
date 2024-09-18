@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "lettherebefire:block/stick_gnd",
+		"particle": "lettherebefire:block/stick_gnd"
+	},
+	"elements": [
+		{
+			"from": [8, 0, 3],
+			"to": [10, 2, 15],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [12, 1, 5]},
+			"faces": {
+				"north": {"uv": [4, 4, 6, 6], "texture": "#0"},
+				"east": {"uv": [0, 0, 12, 2], "texture": "#0"},
+				"south": {"uv": [4, 6, 6, 8], "texture": "#0"},
+				"west": {"uv": [0, 2, 12, 4], "texture": "#0"},
+				"up": {"uv": [2, 16, 0, 4], "texture": "#0"},
+				"down": {"uv": [4, 4, 2, 16], "texture": "#0"}
+			}
+		}
+	]
+}

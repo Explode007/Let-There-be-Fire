@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:stick",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:stick_gnd",
+                  "properties": {
+                    "sticks": "2"
+                  }
+                }
+              ],
+              "count": 2.0
+            },
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:stick_gnd",
+                  "properties": {
+                    "sticks": "3"
+                  }
+                }
+              ],
+              "count": 3.0
+            },
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:stick_gnd",
+                  "properties": {
+                    "sticks": "4"
+                  }
+                }
+              ],
+              "count": 4.0
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

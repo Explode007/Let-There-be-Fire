@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.frilledshrimpo.ltbf.ltbf.mixin",
+  "package": "com.frilledshrimpo.lettherebefire.ltbf.mixin",
   "compatibilityLevel": "JAVA_8",
   "refmap": "ltbf.refmap.json",
   "mixins": [

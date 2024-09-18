@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "sticks=1": [
+      { "model": "lettherebefire:block/stick_gnd", "y": 0 },
+      { "model": "lettherebefire:block/stick_gnd", "y": 90 },
+      { "model": "lettherebefire:block/stick_gnd", "y": 180 },
+      { "model": "lettherebefire:block/stick_gnd", "y": 270 }
+    ],
+    "sticks=2": [
+      { "model": "lettherebefire:block/stick_gnd2", "y": 0 },
+      { "model": "lettherebefire:block/stick_gnd2", "y": 90 },
+      { "model": "lettherebefire:block/stick_gnd2", "y": 180 },
+      { "model": "lettherebefire:block/stick_gnd2", "y": 270 }
+    ],
+    "sticks=3": [
+      { "model": "lettherebefire:block/stick_gnd3", "y": 0 },
+      { "model": "lettherebefire:block/stick_gnd3", "y": 90 },
+      { "model": "lettherebefire:block/stick_gnd3", "y": 180 },
+      { "model": "lettherebefire:block/stick_gnd3", "y": 270 }
+    ],
+    "sticks=4": [
+      { "model": "lettherebefire:block/stick_gnd4", "y": 0 },
+      { "model": "lettherebefire:block/stick_gnd4", "y": 90 },
+      { "model": "lettherebefire:block/stick_gnd4", "y": 180 },
+      { "model": "lettherebefire:block/stick_gnd4", "y": 270 }
+    ]
+  }
+}

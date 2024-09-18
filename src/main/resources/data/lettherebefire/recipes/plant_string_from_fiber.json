@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "lettherebefire:plant_fiber"
+    },
+    {
+      "item": "lettherebefire:plant_fiber"
+    },
+    {
+      "item": "lettherebefire:plant_fiber"
+    }
+  ],
+  "result": {
+    "item": "lettherebefire:plant_string",
+    "count": 1
+  }
+}
