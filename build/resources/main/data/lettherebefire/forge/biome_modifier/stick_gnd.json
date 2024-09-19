@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "lettherebefire:stick_gnd",
+  "step": "top_layer_modification"
+}

@@ -39,21 +39,21 @@ public class LetThereBeFire {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
+
+
+        MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(StickPlaceEventHandler.class);
 
-
-        //Creative Mode Tabs
-        ModCreativeModeTabs.register(modEventBus);
-        MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
-
         modEventBus.addListener(this::commonSetup);
+
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-
+        LOGGER.info("Common Setup LOGGER");
     }
 
     // Add the example block item to the building blocks tab
