@@ -1,5 +1,5 @@
 {
-  "type": "minecraft:simple_block",
+  "type": "lettherebefire:custom_stick_block",
   "config": {
     "to_place": {
       "type": "minecraft:simple_state_provider",

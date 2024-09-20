@@ -4,6 +4,7 @@ import com.frilledshrimpo.lettherebefire.blocks.ModBlocks;
 import com.frilledshrimpo.lettherebefire.events.StickPlaceEventHandler;
 import com.frilledshrimpo.lettherebefire.item.ModCreativeModeTabs;
 import com.frilledshrimpo.lettherebefire.item.ModItems;
+import com.frilledshrimpo.lettherebefire.worldgen.ModFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
@@ -39,6 +40,8 @@ public class LetThereBeFire {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModFeatures.register(modEventBus);
+
         ModCreativeModeTabs.register(modEventBus);
 
 

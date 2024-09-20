@@ -6,13 +6,13 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import org.slf4j.Logger;
-
-import static net.minecraft.data.worldgen.placement.VegetationPlacements.worldSurfaceSquaredWithCount;
 
 import java.util.List;
 
@@ -25,7 +25,15 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, STICK_GND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STICK_GND_KEY), worldSurfaceSquaredWithCount(10));
+
+        register(context, STICK_GND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STICK_GND_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(1), // Spawns approximately once every 8 chunks
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
 
     }
 
