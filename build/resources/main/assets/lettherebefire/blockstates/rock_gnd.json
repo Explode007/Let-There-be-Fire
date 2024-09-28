@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "count=1": [
+      { "model": "lettherebefire:block/rock_gnd",
+        "y": 0 },
+      { "model": "lettherebefire:block/rock_gnd"
+      , "y": 90 },
+      { "model": "lettherebefire:block/rock_gnd",
+        "y": 180 },
+      { "model": "lettherebefire:block/rock_gnd"
+      , "y": 270 }
+    ],
+    "count=2": [
+      { "model": "lettherebefire:block/rock_gnd2",
+        "y": 0 },
+      { "model": "lettherebefire:block/rock_gnd2"
+      , "y": 90 },
+      { "model": "lettherebefire:block/rock_gnd2",
+        "y": 180 },
+      { "model": "lettherebefire:block/rock_gnd2"
+      , "y": 270 }
+    ],
+    "count=3": [
+      { "model": "lettherebefire:block/rock_gnd3",
+        "y": 0 },
+      { "model": "lettherebefire:block/rock_gnd3"
+      , "y": 90 },
+      { "model": "lettherebefire:block/rock_gnd3",
+        "y": 180 },
+      { "model": "lettherebefire:block/rock_gnd3"
+      , "y": 270 }
+    ],
+    "count=4": [
+      { "model": "lettherebefire:block/rock_gnd4",
+        "y": 0 },
+      { "model": "lettherebefire:block/rock_gnd4"
+      , "y": 90 },
+      { "model": "lettherebefire:block/rock_gnd4",
+        "y": 180 },
+      { "model": "lettherebefire:block/rock_gnd4"
+      , "y": 270 }
+    ]
+  }
+}

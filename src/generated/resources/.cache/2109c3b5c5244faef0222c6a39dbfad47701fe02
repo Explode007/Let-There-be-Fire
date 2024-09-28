@@ -1,0 +1,4 @@
+// 1.20.1	2024-09-27T22:31:16.0156145	Global Loot Modifiers : lettherebefire
+6f02640dbea13fa0dc3b04828fe5d28d4bf328fe data/forge/loot_modifiers/global_loot_modifiers.json
+6b8e6a3ee533bfd9ecaf9e2e2586c6c11f34c7dc data/lettherebefire/loot_modifiers/no_tool_log_loot_modifier.json
+a0416212ef402ffe0dcc70de15bc15784f3045b5 data/lettherebefire/loot_modifiers/sharp_rock_loot_modifier.json

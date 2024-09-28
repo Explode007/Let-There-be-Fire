@@ -21,14 +21,24 @@ public class ModPlacedFeatures {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final ResourceKey<PlacedFeature> STICK_GND_PLACED_KEY = registerKey("stick_gnd");
+    public static final ResourceKey<PlacedFeature> ROCK_GND_PLACED_KEY = registerKey("rock_gnd");
+
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-
         register(context, STICK_GND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.STICK_GND_KEY),
                 List.of(
-                        RarityFilter.onAverageOnceEvery(1), // Spawns approximately once every 8 chunks
+                        RarityFilter.onAverageOnceEvery(4),
+                        InSquarePlacement.spread(),
+                        PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
+                        BiomeFilter.biome()
+                )
+        );
+
+        register(context, ROCK_GND_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.ROCK_GND_KEY),
+                List.of(
+                        RarityFilter.onAverageOnceEvery(4),
                         InSquarePlacement.spread(),
                         PlacementUtils.HEIGHTMAP_WORLD_SURFACE,
                         BiomeFilter.biome()

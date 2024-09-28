@@ -13,9 +13,13 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 
 public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> STICK_GND_KEY = registerKey("stick_gnd");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ROCK_GND_KEY = registerKey("rock_gnd");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
-        context.register(STICK_GND_KEY, new ConfiguredFeature<>(ModFeatures.CUSTOM_STICK_BLOCK.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STICK_GND.get().defaultBlockState()))));
+        context.register(STICK_GND_KEY, new ConfiguredFeature<>(ModFeatures.STICK_GND_FEATURE.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.STICK_GND.get().defaultBlockState()))));
+        context.register(ROCK_GND_KEY, new ConfiguredFeature<>(ModFeatures.ROCK_GND_FEATURE.get(), new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.ROCK_GND.get().defaultBlockState()))));
+
+
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

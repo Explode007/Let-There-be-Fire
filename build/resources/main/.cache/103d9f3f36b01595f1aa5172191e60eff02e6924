@@ -1,4 +1,7 @@
-// 1.20.1	2024-09-19T21:12:41.6084493	Registries
+// 1.20.1	2024-09-22T12:35:19.7695654	Registries
+f3c20f1a3806929b1992b36ad3456bb7ebb54417 data/lettherebefire/forge/biome_modifier/rock_gnd.json
 aa0dc75e64419256af3f6db580513655146e6242 data/lettherebefire/forge/biome_modifier/stick_gnd.json
-e50413b2956595d3393f5d44190e658b7c6f4b54 data/lettherebefire/worldgen/configured_feature/stick_gnd.json
-dfe43b6bca69631d14224243a4c2b6aa2e436cde data/lettherebefire/worldgen/placed_feature/stick_gnd.json
+a49d351f5ac5b3c2511829b5e8a950c4282ed138 data/lettherebefire/worldgen/configured_feature/rock_gnd.json
+025570a531e7ac7857505d6edb2c4b7b4f101799 data/lettherebefire/worldgen/configured_feature/stick_gnd.json
+8bb0ad4a467605f063cb8c406ac4dab44848e8ae data/lettherebefire/worldgen/placed_feature/rock_gnd.json
+98153d6f49daeddbf4d3912353857adc9afd5553 data/lettherebefire/worldgen/placed_feature/stick_gnd.json

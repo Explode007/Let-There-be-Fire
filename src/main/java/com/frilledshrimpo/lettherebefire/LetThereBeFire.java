@@ -1,8 +1,8 @@
 package com.frilledshrimpo.lettherebefire;
 
 import com.frilledshrimpo.lettherebefire.blocks.ModBlocks;
+import com.frilledshrimpo.lettherebefire.datagen.lootmodifier.ModLootModifiers;
 import com.frilledshrimpo.lettherebefire.events.StickPlaceEventHandler;
-import com.frilledshrimpo.lettherebefire.item.ModCreativeModeTabs;
 import com.frilledshrimpo.lettherebefire.item.ModItems;
 import com.frilledshrimpo.lettherebefire.worldgen.ModFeatures;
 import com.mojang.logging.LogUtils;
@@ -41,6 +41,7 @@ public class LetThereBeFire {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModFeatures.register(modEventBus);
+        ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
 
         ModCreativeModeTabs.register(modEventBus);
 
@@ -62,8 +63,8 @@ public class LetThereBeFire {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.PLANTFIBER);
-            event.accept(ModItems.PLANTSTRING);
+            event.accept(ModItems.PLANT_FIBER);
+            event.accept(ModItems.PLANT_STRING);
 
         }
     }

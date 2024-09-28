@@ -2,7 +2,6 @@ package com.frilledshrimpo.lettherebefire.blocks;
 
 import com.frilledshrimpo.lettherebefire.LetThereBeFire;
 import com.frilledshrimpo.lettherebefire.item.ModItems;
-import net.minecraft.client.resources.model.Material;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,7 +13,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import java.util.Objects;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -25,8 +23,16 @@ public class ModBlocks {
     }
 
     public static final RegistryObject<Block> STICK_GND = registerBlock("stick_gnd",
-            () -> new StickGndBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+            () -> new StickGroundBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
                     .sound(SoundType.WOOD)
+                    .noOcclusion()
+                    .strength(0.1f)
+            )
+    );
+
+    public static final RegistryObject<Block> ROCK_GND = registerBlock("rock_gnd",
+            () -> new RockGroundBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)
+                    .sound(SoundType.STONE)
                     .noOcclusion()
                     .strength(0.1f)
             )

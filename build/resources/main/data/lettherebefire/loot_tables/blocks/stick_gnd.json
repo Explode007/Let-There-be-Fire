@@ -16,7 +16,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "lettherebefire:stick_gnd",
                   "properties": {
-                    "sticks": "2"
+                    "count": "2"
                   }
                 }
               ],
@@ -30,7 +30,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "lettherebefire:stick_gnd",
                   "properties": {
-                    "sticks": "3"
+                    "count": "3"
                   }
                 }
               ],
@@ -44,7 +44,7 @@
                   "condition": "minecraft:block_state_property",
                   "block": "lettherebefire:stick_gnd",
                   "properties": {
-                    "sticks": "4"
+                    "count": "4"
                   }
                 }
               ],

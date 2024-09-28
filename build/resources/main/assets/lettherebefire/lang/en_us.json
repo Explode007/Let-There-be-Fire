@@ -1,8 +1,11 @@
 {
   "item.lettherebefire.plant_fiber": "Plant Fiber",
   "item.lettherebefire.plant_string": "Plant String",
+  "item.lettherebefire.loose_rock": "Loose Rock",
+  "item.lettherebefire.sharp_rock": "Sharp Rock",
 
   "block.lettherebefire.stick_gnd": "Stick (Decorative)",
+
 
   "creativetab.ltbf_tab": "Let There Be Fire!"
 }

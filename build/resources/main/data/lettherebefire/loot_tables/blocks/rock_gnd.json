@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "lettherebefire:loose_rock",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:rock_gnd",
+                  "properties": {
+                    "count": "2"
+                  }
+                }
+              ],
+              "count": 2.0
+            },
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:rock_gnd",
+                  "properties": {
+                    "count": "3"
+                  }
+                }
+              ],
+              "count": 3.0
+            },
+            {
+              "function": "minecraft:set_count",
+              "add": false,
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "lettherebefire:rock_gnd",
+                  "properties": {
+                    "count": "4"
+                  }
+                }
+              ],
+              "count": 4.0
+            },
+            {
+              "function": "minecraft:explosion_decay"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

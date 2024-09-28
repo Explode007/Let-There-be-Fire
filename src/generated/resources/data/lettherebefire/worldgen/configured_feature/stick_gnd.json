@@ -1,12 +1,12 @@
 {
-  "type": "lettherebefire:custom_stick_block",
+  "type": "lettherebefire:stick_gnd_feature",
   "config": {
     "to_place": {
       "type": "minecraft:simple_state_provider",
       "state": {
         "Name": "lettherebefire:stick_gnd",
         "Properties": {
-          "sticks": "1"
+          "count": "1"
         }
       }
     }

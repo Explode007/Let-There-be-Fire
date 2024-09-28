@@ -1,0 +1,14 @@
+{
+  "type": "lettherebefire:rock_gnd_feature",
+  "config": {
+    "to_place": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "lettherebefire:rock_gnd",
+        "Properties": {
+          "count": "1"
+        }
+      }
+    }
+  }
+}
