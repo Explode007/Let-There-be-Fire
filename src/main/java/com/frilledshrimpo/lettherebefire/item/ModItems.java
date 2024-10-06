@@ -13,6 +13,7 @@ public class ModItems {
     public static final RegistryObject<Item> PLANT_STRING = ITEMS.register("plant_string", () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> SHARP_ROCK = ITEMS.register("sharp_rock", () -> new SharpRockItem(new Item.Properties()));
     public static final RegistryObject<Item> LOOSE_ROCK = ITEMS.register("loose_rock", () -> new LooseRockItem(new Item.Properties()));
+    public static final RegistryObject<Item> CARVED_STICK = ITEMS.register("carved_stick", () -> new CarvedStickItem(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -3,9 +3,19 @@
   "item.lettherebefire.plant_string": "Plant String",
   "item.lettherebefire.loose_rock": "Loose Rock",
   "item.lettherebefire.sharp_rock": "Sharp Rock",
+  "item.lettherebefire.carved_stick": "Carved Stick",
+
+
+  "item.lettherebefire.carved_stick.tooltip": "Component used for crafting stone axe (right-click me!)",
 
   "block.lettherebefire.stick_gnd": "Stick (Decorative)",
 
 
-  "creativetab.ltbf_tab": "Let There Be Fire!"
+  "creativetab.ltbf_tab": "Let There Be Fire!",
+  "message.missing_both_items": "Missing Sharp Rock & Plant String",
+  "message.missing_sharp_rock": "Missing Sharp Rock",
+  "message.missing_plant_string": "Missing Plant String",
+
+
+  "gui.carved_stick.title": "Carving Stick..."
 }

@@ -18,8 +18,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Blocks;
 
-import java.awt.*;
-
 public class LooseRockItem extends Item {
 
     private int clickCounter = 0;
@@ -34,7 +32,7 @@ public class LooseRockItem extends Item {
 
         if (isHoldingLooseRock(player)) {
             clickCounter++;
-            player.playSound(SoundEvents.PLAYER_ATTACK_SWEEP, 0.1f, 1f);
+            player.playSound(SoundEvents.PLAYER_ATTACK_SWEEP, 0.3f, 1f);
             for (int i = 0; i < 5; i++) {
                 world.addParticle(
                         new BlockParticleOption(ParticleTypes.BLOCK, Blocks.STONE.defaultBlockState()),
@@ -54,7 +52,7 @@ public class LooseRockItem extends Item {
 
                 if (success) {
                     // Play success sound
-                    world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.STONE_BREAK, SoundSource.PLAYERS, 3.0f, 1.0f);
+                    world.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.STONE_BREAK, SoundSource.PLAYERS, 10.0f, 1.0f);
                     player.addItem(new ItemStack(ModItems.SHARP_ROCK.get()));
                     clickCounter = 0;
                     return InteractionResultHolder.success(itemStack);
