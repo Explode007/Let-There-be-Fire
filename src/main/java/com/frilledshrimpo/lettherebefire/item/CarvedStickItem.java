@@ -1,6 +1,6 @@
 package com.frilledshrimpo.lettherebefire.item;
 
-import com.frilledshrimpo.lettherebefire.CarvedStickScreen;
+import com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -36,9 +36,8 @@ public class CarvedStickItem extends Item {
         boolean hasPlantString = player.getInventory().contains(new ItemStack(ModItems.PLANT_STRING.get()));
 
         if (world.isClientSide && hasSharpRock && hasPlantString) {
-            Minecraft.getInstance().setScreen(new CarvedStickScreen());
+            Minecraft.getInstance().setScreen(new CraftStoneAxeScreen());
         }else {
-            // Notify the player of missing items using the action bar
             if (!hasSharpRock && !hasPlantString) {
                 player.displayClientMessage(Component.translatable("message.missing_both_items"), true);
             } else if (!hasSharpRock) {

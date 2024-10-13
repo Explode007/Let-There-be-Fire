@@ -13,16 +13,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.minecraftforge.client.event.ScreenEvent;
 import org.joml.Quaternionf;
 
-import java.util.Comparator;
-
-public class CarvedStickScreen extends Screen {
+public class CraftStoneAxeScreen extends Screen {
     private static final ResourceLocation TEXTURE = new ResourceLocation(LetThereBeFire.MODID, "textures/gui/grass_gui.png");
     private static final ResourceLocation CARVED_STICK_FRONT = new ResourceLocation(LetThereBeFire.MODID, "textures/gui/carved_stick_front.png");
-    private static final ResourceLocation SHARP_ROCK_TEXTURE = new ResourceLocation("lettherebefire", "textures/item/sharp_rock.png");
-    private static final ResourceLocation CARVED_STICK_TEXTURE = new ResourceLocation("lettherebefire", "textures/item/carved_stick.png");
+    private static final ResourceLocation SHARP_ROCK_TEXTURE = new ResourceLocation(LetThereBeFire.MODID, "textures/item/sharp_rock.png");
+    private static final ResourceLocation CARVED_STICK_TEXTURE = new ResourceLocation(LetThereBeFire.MODID, "textures/item/carved_stick.png");
+    private static final ResourceLocation ROTATE_INDICATOR = new ResourceLocation(LetThereBeFire.MODID, "textures/gui/rotate_indicator.png");
 
     private final int imageWidth = 64;
     private final int imageHeight = 64;
@@ -31,7 +30,7 @@ public class CarvedStickScreen extends Screen {
     private int windLoops = 0;
     private int lastMouseX = -1, lastMouseY = -1;
 
-    public CarvedStickScreen() {
+    public CraftStoneAxeScreen() {
         super(Component.translatable("gui.carved_stick.title"));
     }
 
@@ -55,10 +54,12 @@ public class CarvedStickScreen extends Screen {
         Minecraft.getInstance().getTextureManager().bindForSetup(CARVED_STICK_FRONT);
         Minecraft.getInstance().getTextureManager().bindForSetup(SHARP_ROCK_TEXTURE);
         Minecraft.getInstance().getTextureManager().bindForSetup(CARVED_STICK_TEXTURE);
+        Minecraft.getInstance().getTextureManager().bindForSetup(CARVED_STICK_TEXTURE);
+
 
         pGuiGraphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, 64, 64);
 
-        renderItems(pGuiGraphics);
+        renderItems(pGuiGraphics, pMouseX, pMouseY);
 
         if (rockSettled && draggingString) {
             renderWinding(pGuiGraphics, pMouseX, pMouseY);
@@ -67,7 +68,7 @@ public class CarvedStickScreen extends Screen {
         super.render(pGuiGraphics, pMouseX, pMouseY, pPartialTick);
     }
 
-    private void renderItems(GuiGraphics pGuiGraphics) {
+    private void renderItems(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY) {
         // Render Carved Stick as 2D texture (back)
         pGuiGraphics.pose().pushPose();
         pGuiGraphics.pose().translate(this.stickPosX, this.stickPosY, 0);  // Translate to the stick position
@@ -80,15 +81,22 @@ public class CarvedStickScreen extends Screen {
 
         // Render Sharp Rock (if not settled)
         if (!rockSettled) {
+            if (isMouseOverRock(pMouseX, pMouseY) && !draggingRock) {
+                // Draw an opaque white overlay (16x16 pixels) over the sharp rock
+                RenderSystem.enableBlend();
+                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.8F); // Set color for a mostly opaque white effect
+                pGuiGraphics.fill(this.rockPosX, this.rockPosY, this.rockPosX + 16, this.rockPosY + 16, 0x80FFFFFF); // Draw white rectangle
+                RenderSystem.disableBlend();
+            }
             pGuiGraphics.blit(SHARP_ROCK_TEXTURE, this.rockPosX, this.rockPosY, 0, 0, 16, 16, 16, 16);  // Sharp rock
         } else {
             // Adjust the rock position when it is settled
             this.rockPosX = this.stickPosX + 3;
             this.rockPosY = this.stickPosY - 12;
 
-            pGuiGraphics.pose().pushPose();
             pGuiGraphics.blit(SHARP_ROCK_TEXTURE, this.rockPosX, this.rockPosY, 0, 0, 16, 16, 16, 16);
-            pGuiGraphics.pose().popPose();
+            pGuiGraphics.blit(ROTATE_INDICATOR, this.rockPosX - 15, this.rockPosY - 50, 0, 0, 32, 32, 32, 32);
+
 
 
             pGuiGraphics.pose().pushPose();
@@ -98,11 +106,16 @@ public class CarvedStickScreen extends Screen {
             pGuiGraphics.blit(CARVED_STICK_FRONT, 0, 0, 0, 0, 16, 16, 16, 16);
             pGuiGraphics.pose().popPose();
 
-            // Render Plant String after everything else
+            if (isMouseOverString(pMouseX, pMouseY) && !draggingString) {
+                // Draw an opaque white overlay (16x16 pixels) over the plant string
+                RenderSystem.enableBlend();
+                RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.8F); // Set color for a mostly opaque white effect
+                pGuiGraphics.fill(this.stringPosX, this.stringPosY, this.stringPosX + 16, this.stringPosY + 16, 0x80FFFFFF); // Draw white rectangle
+                RenderSystem.disableBlend();
+            }
             pGuiGraphics.renderItem(new ItemStack(ModItems.PLANT_STRING.get()), this.stringPosX, this.stringPosY);
         }
     }
-
 
 
     private void renderWinding(GuiGraphics pGuiGraphics, int pMouseX, int pMouseY) {
