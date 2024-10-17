@@ -5,9 +5,9 @@ Time: 2024-10-05 14:34:12
 Description: mouseDragged event handler
 
 java.lang.NoClassDefFoundError: Could not initialize class com.frilledshrimpo.lettherebefire.network.ModPacketHandler
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113) ~[main/:?] {re:classloading}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.trackMouseForWinding(CarvedStickScreen.java:98) ~[main/:?] {re:classloading}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.mouseDragged(CarvedStickScreen.java:163) ~[main/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113) ~[main/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.trackMouseForWinding(CarvedStickScreen.java:98) ~[main/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.mouseDragged(CarvedStickScreen.java:163) ~[main/:?] {re:classloading}
 	at net.minecraft.client.MouseHandler.lambda$onMove$11(MouseHandler.java:247) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
 	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:455) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.MouseHandler.onMove(MouseHandler.java:245) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}
@@ -48,11 +48,11 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Let There be Fire!: An Early Game Overhaul (lettherebefire), Version: 1.0-SNAPSHOT
-		at TRANSFORMER/lettherebefire@1.0-SNAPSHOT/com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113)
+		at TRANSFORMER/lettherebefire@1.0-SNAPSHOT/com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113)
 Stacktrace:
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113) ~[%23196!/:?] {re:classloading}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.trackMouseForWinding(CarvedStickScreen.java:98) ~[%23196!/:?] {re:classloading}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.mouseDragged(CarvedStickScreen.java:163) ~[%23196!/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.completeWinding(CarvedStickScreen.java:113) ~[%23196!/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.trackMouseForWinding(CarvedStickScreen.java:98) ~[%23196!/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.mouseDragged(CarvedStickScreen.java:163) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.client.MouseHandler.lambda$onMove$11(MouseHandler.java:247) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
 	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:455) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.MouseHandler.onMove(MouseHandler.java:245) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
@@ -66,7 +66,7 @@ Stacktrace:
 	at com.mojang.blaze3d.systems.RenderSystem.flipFrame(RenderSystem.java:184) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:runtimedistcleaner:A}
 -- Affected screen --
 Details:
-	Screen name: com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen
+	Screen name: com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen
 Stacktrace:
 	at net.minecraft.client.gui.screens.Screen.wrapScreenError(Screen.java:455) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraft.client.MouseHandler.onMove(MouseHandler.java:245) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:runtimedistcleaner:A}

@@ -6,7 +6,7 @@ Description: Rendering screen
 
 java.lang.NullPointerException: Cannot read field "level" because "this.minecraft" is null
 	at net.minecraft.client.gui.screens.Screen.renderBackground(Screen.java:377) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.render(CarvedStickScreen.java:36) ~[main/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.render(CarvedStickScreen.java:36) ~[main/:?] {re:classloading}
 	at net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:109) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraftforge.client.ForgeHooksClient.drawScreenInternal(ForgeHooksClient.java:427) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading}
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:420) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar:?] {re:classloading}
@@ -39,16 +39,16 @@ A detailed walkthrough of the error, its code path and all known details is as f
 Thread: Render thread
 Suspected Mod: 
 	Let There be Fire!: An Early Game Overhaul (lettherebefire), Version: 1.0-SNAPSHOT
-		at TRANSFORMER/lettherebefire@1.0-SNAPSHOT/com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.render(CarvedStickScreen.java:36)
+		at TRANSFORMER/lettherebefire@1.0-SNAPSHOT/com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.render(CarvedStickScreen.java:36)
 Stacktrace:
 	at net.minecraft.client.gui.screens.Screen.renderBackground(Screen.java:377) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
-	at com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen.render(CarvedStickScreen.java:36) ~[%23196!/:?] {re:classloading}
+	at com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen.render(CarvedStickScreen.java:36) ~[%23196!/:?] {re:classloading}
 	at net.minecraft.client.gui.screens.Screen.renderWithTooltip(Screen.java:109) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23191!/:?] {re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
 	at net.minecraftforge.client.ForgeHooksClient.drawScreenInternal(ForgeHooksClient.java:427) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
 	at net.minecraftforge.client.ForgeHooksClient.drawScreen(ForgeHooksClient.java:420) ~[forge-1.20.1-47.3.0_mapped_parchment_2023.09.03-1.20.1-recomp.jar%23190%23197!/:?] {re:classloading}
 -- Screen render details --
 Details:
-	Screen name: com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen
+	Screen name: com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen
 	Mouse location: Scaled: (177, 61). Absolute: (354.000000, 122.000000)
 	Screen size: Scaled: (427, 240). Absolute: (854, 480). Scale factor of 2.000000
 Stacktrace:

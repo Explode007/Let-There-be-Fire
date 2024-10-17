@@ -263,7 +263,7 @@
 [27Sep2024 22:31:14.941] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for lettherebefire
 [27Sep2024 22:31:14.951] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.frilledshrimpo.lettherebefire.Config to MOD
 [27Sep2024 22:31:14.957] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.frilledshrimpo.lettherebefire.datagen.DataGenerators to MOD
-[27Sep2024 22:31:14.966] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.frilledshrimpo.lettherebefire.events.StickPlaceEventHandler to FORGE
+[27Sep2024 22:31:14.966] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.frilledshrimpo.lettherebefire.events.ModEventSubscriber to FORGE
 [27Sep2024 22:31:14.966] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing com.frilledshrimpo.lettherebefire.LetThereBeFire$ClientModEvents to MOD
 [27Sep2024 22:31:14.996] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
 [27Sep2024 22:31:14.997] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17

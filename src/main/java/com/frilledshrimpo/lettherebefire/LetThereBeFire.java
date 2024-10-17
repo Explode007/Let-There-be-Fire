@@ -2,9 +2,11 @@ package com.frilledshrimpo.lettherebefire;
 
 import com.frilledshrimpo.lettherebefire.blocks.ModBlocks;
 import com.frilledshrimpo.lettherebefire.datagen.lootmodifier.ModLootModifiers;
-import com.frilledshrimpo.lettherebefire.events.StickPlaceEventHandler;
+import com.frilledshrimpo.lettherebefire.events.ModEventSubscriber;
+import com.frilledshrimpo.lettherebefire.events.ModGuiEvents;
 import com.frilledshrimpo.lettherebefire.item.ModItems;
 import com.frilledshrimpo.lettherebefire.network.ModPacketHandler;
+import com.frilledshrimpo.lettherebefire.recipe.ModRecipes;
 import com.frilledshrimpo.lettherebefire.worldgen.ModFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
@@ -44,12 +46,15 @@ public class LetThereBeFire {
         ModFeatures.register(modEventBus);
         ModPacketHandler.register();
         ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
+        ModRecipes.RECIPE_TYPES.register(modEventBus);
+        ModRecipes.RECIPE_SERIALIZERS.register(modEventBus);
+
+
 
         ModCreativeModeTabs.register(modEventBus);
 
 
         MinecraftForge.EVENT_BUS.register(this);
-        MinecraftForge.EVENT_BUS.register(StickPlaceEventHandler.class);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::commonSetup);

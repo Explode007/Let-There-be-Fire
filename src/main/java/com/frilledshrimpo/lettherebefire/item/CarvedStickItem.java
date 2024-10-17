@@ -1,6 +1,6 @@
 package com.frilledshrimpo.lettherebefire.item;
 
-import com.frilledshrimpo.lettherebefire.CraftStoneAxeScreen;
+import com.frilledshrimpo.lettherebefire.gui.CraftStoneAxeScreen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;

@@ -1,5 +1,6 @@
-package com.frilledshrimpo.lettherebefire;
+package com.frilledshrimpo.lettherebefire.gui;
 
+import com.frilledshrimpo.lettherebefire.LetThereBeFire;
 import com.frilledshrimpo.lettherebefire.item.ModItems;
 import com.frilledshrimpo.lettherebefire.network.ActionPacket;
 import com.frilledshrimpo.lettherebefire.network.ModPacketHandler;
@@ -13,7 +14,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.client.event.ScreenEvent;
 import org.joml.Quaternionf;
 
 public class CraftStoneAxeScreen extends Screen {
