@@ -9,9 +9,11 @@ import com.frilledshrimpo.lettherebefire.network.ModPacketHandler;
 import com.frilledshrimpo.lettherebefire.recipe.ModRecipes;
 import com.frilledshrimpo.lettherebefire.worldgen.ModFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.crafting.RecipeManager;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -65,6 +67,11 @@ public class LetThereBeFire {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
         LOGGER.info("Common Setup LOGGER");
+
+        RecipeManager reicpeManager = Minecraft.getInstance().level.getRecipeManager();
+        reicpeManager.getRecipes().forEach((recipe) -> {
+            LOGGER.info("[LTBF] Recipe Loaded: {}", recipe.toString());
+        });
     }
 
     // Add the example block item to the building blocks tab
